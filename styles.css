@@ -82,7 +82,7 @@ a {
 }
 
 .nav-links li {
-  margin-left: 30px;
+  margin-left: 70px;
 }
 
 .nav-links a {
@@ -551,6 +551,72 @@ a {
 
 .contact-form .btn:hover {
   background-color: #ff6f61;
+}
+
+/* Privacy Policy Section */
+.privacy-policy {
+  padding: 100px 5% 60px; /* Adjusted padding to account for fixed navbar */
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: rgba(26, 26, 26, 0.7); /* Semi-transparent background */
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  margin-top: 60px; /* Adjusted margin for fixed navbar */
+}
+
+.privacy-policy h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #ff6f61;
+  text-align: center;
+}
+
+.privacy-policy h2 {
+  font-size: 24px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #ff6f61;
+}
+
+.privacy-policy p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Terms of Service Section */
+.terms-of-service {
+  padding: 60px 5% 60px; /* Adjusted padding to account for fixed navbar */
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: rgba(26, 26, 26, 0.7); /* Semi-transparent background */
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  margin-top: 40px; /* Adjusted margin for spacing */
+}
+
+.terms-of-service h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #ff6f61;
+  text-align: center;
+}
+
+.terms-of-service h2 {
+  font-size: 24px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #ff6f61;
+}
+
+.terms-of-service p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #fff;
+  margin-bottom: 20px;
 }
 
 /* Footer */

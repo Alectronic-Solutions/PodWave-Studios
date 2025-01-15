@@ -13,7 +13,9 @@ document.querySelectorAll('.nav-links a').forEach(anchor => {
     e.preventDefault();
     const targetId = this.getAttribute('href').substring(1);
     const targetElement = document.getElementById(targetId);
-    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   });
 });
 
@@ -22,12 +24,26 @@ const testimonialCards = document.querySelectorAll('.testimonial-card');
 let currentTestimonial = 0;
 
 function showNextTestimonial() {
+  if (testimonialCards.length === 0) return; // Exit if no testimonial cards
+
+  // Remove active class from the current testimonial
   testimonialCards[currentTestimonial].classList.remove('active');
+
+  // Move to the next testimonial
   currentTestimonial = (currentTestimonial + 1) % testimonialCards.length;
+
+  // Add active class to the next testimonial
   testimonialCards[currentTestimonial].classList.add('active');
 }
 
-setInterval(showNextTestimonial, 5000);
+// Only start the carousel if there are testimonial cards
+if (testimonialCards.length > 0) {
+  // Show the first testimonial immediately
+  testimonialCards[currentTestimonial].classList.add('active');
+
+  // Start the carousel
+  setInterval(showNextTestimonial, 5000);
+}
 
 // Fade-in on scroll
 const fadeElements = document.querySelectorAll('.fade-in');
@@ -54,7 +70,9 @@ cards.forEach((card) => {
   card.addEventListener('click', () => {
     const modalId = card.getAttribute('data-modal');
     const modal = document.getElementById(modalId);
-    modal.style.display = 'block';
+    if (modal) {
+      modal.style.display = 'block';
+    }
   });
 });
 
@@ -62,7 +80,9 @@ cards.forEach((card) => {
 closeButtons.forEach((button) => {
   button.addEventListener('click', () => {
     const modal = button.closest('.modal');
-    modal.style.display = 'none';
+    if (modal) {
+      modal.style.display = 'none';
+    }
   });
 });
 
@@ -77,6 +97,8 @@ window.addEventListener('click', (e) => {
 document.querySelectorAll('.contact-now').forEach((button) => {
   button.addEventListener('click', () => {
     const modal = button.closest('.modal');
-    modal.style.display = 'none';
+    if (modal) {
+      modal.style.display = 'none';
+    }
   });
 });
